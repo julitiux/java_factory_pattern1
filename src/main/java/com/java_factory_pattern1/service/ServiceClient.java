@@ -11,4 +11,6 @@ public abstract class ServiceClient {
 
   public abstract ClientResponse callService(ClientRequest clientRequest, HttpHeaders httpHeaders);
 
+  public abstract void validResponse(ClientResponse clientResponse);
+
 }
