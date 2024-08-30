@@ -1,6 +1,8 @@
 package com.java_factory_pattern1.service;
 
 import com.java_factory_pattern1.model.ApiRequest;
+import com.java_factory_pattern1.model.ClientRequest;
+import com.java_factory_pattern1.model.ClientResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +16,13 @@ public class ManagementService {
   }
 
   public void execClient(ApiRequest apiRequest, HttpHeaders httpHeaders) {
+
+    ServiceClient service = serviceClientFactory.getService(apiRequest);
+    ClientRequest clientRequest = service.createRequest(apiRequest, httpHeaders);
+    ClientResponse clientResponse = service.callService(clientRequest, httpHeaders);
+
+    service.validResponse(clientResponse);
+
   }
 
 }
