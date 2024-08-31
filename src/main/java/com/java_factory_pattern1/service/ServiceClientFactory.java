@@ -14,7 +14,10 @@ public class ServiceClientFactory {
   }
 
   public ServiceClient getService(ApiRequest apiRequest) {
-    return null;
+
+    ServiceClient serviceClient = finalService;
+
+    return serviceClient;
   }
 
 }
