@@ -9,9 +9,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FinalService extends AnyService {
+public class MltService extends AnyService {
 
-  protected FinalService(MltFeignClient mltFeignClient) {
+  protected MltService(MltFeignClient mltFeignClient) {
     super(mltFeignClient);
   }
 

@@ -2,21 +2,20 @@ package com.java_factory_pattern1.service.impl;
 
 import com.java_factory_pattern1.model.ApiRequest;
 import com.java_factory_pattern1.service.ServiceClient;
-import com.java_factory_pattern1.service.impl.FinalService;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ServiceClientFactory {
 
-  private final FinalService finalService;
+  private final MltService mltService;
 
-  public ServiceClientFactory(FinalService finalService) {
-    this.finalService = finalService;
+  public ServiceClientFactory(MltService finalService) {
+    this.mltService = finalService;
   }
 
   public ServiceClient getService(ApiRequest apiRequest) {
 
-    return finalService;
+    return mltService;
 
   }
 
