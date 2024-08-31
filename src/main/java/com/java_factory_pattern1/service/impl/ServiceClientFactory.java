@@ -1,6 +1,7 @@
-package com.java_factory_pattern1.service;
+package com.java_factory_pattern1.service.impl;
 
 import com.java_factory_pattern1.model.ApiRequest;
+import com.java_factory_pattern1.service.ServiceClient;
 import com.java_factory_pattern1.service.impl.FinalService;
 import org.springframework.stereotype.Component;
 
